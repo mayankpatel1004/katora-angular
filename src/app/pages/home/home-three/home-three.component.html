@@ -1,0 +1,307 @@
+<app-page-loader></app-page-loader>
+<app-header-three></app-header-three>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+
+<ngx-slick-carousel class="carousel Modern-Slider" 
+              #slickModal="slick-carousel" 
+              [config]="slideConfigCarousel" >
+
+              <div ngxSlickItem class="slide item">
+                <div class="img-fill">
+                  
+                  <div class="info" style="background-image: url(assets/images/slick_carousel_demo_3/Slider_01_02.jpg);">
+                    <div class="container">
+                      <div class="info_center">
+                        <h5>{{'A Heap Of Fashion Apparels' | translate}}</h5>
+                        <h2>{{'Women Dresses' | translate}}<br>{{'The Ones You Love' | translate}}</h2>
+                        <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+                <div ngxSlickItem class="slide item">
+                  <div class="img-fill">
+                    
+                    <div class="info" style="background-image: url(assets/images/slick_carousel_demo_3/Slider_01_01.jpg);">
+                      <div class="container">
+                        <div class="info_left">
+                          <h5>{{'From The House Of Brands' | translate}}</h5>
+                          <h2>{{'Check New Arrival' | translate}}<br>{{'Of Jeans Pent' | translate}}</h2>
+                          <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div ngxSlickItem class="slide item">
+                  <div class="img-fill">
+                    
+                    <div class="info" style="background-image: url(assets/images/slick_carousel_demo_3/Slider_01_03.jpg);">
+                      <div class="container">
+                        <div class="info_right">
+                          <h5>{{'Collection of Glasses' | translate}}</h5>
+                          <h2>{{'Have A Touch Of' | translate}}<br>{{'Class In Your Beauty' | translate}}</h2>
+                          <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+</ngx-slick-carousel>
+
+<!-- Products Tabs -->  
+<section class="pro-content pro-tab-content ">
+<div class="container"> 
+<div class="products-area">
+
+    <div class="row justify-content-center">
+        <div class="col-12 col-lg-12">
+        <div class="pro-heading-title">
+            <h1> {{'Best Products' | translate}}
+            </h1>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- ..........tabs start ......... -->
+    <div class="row ">
+        <div class="col-md-12 p-0">
+        <div class="nav" role="tablist" id="tabCarousel">
+            <a class="nav-link  active" data-toggle="tab" href="#all" role="tab" aria-controls="all" aria-selected="true">{{'All Categories' | translate}}</a> 
+
+            <a class="nav-link"  data-toggle="tab" href="#men" role="tab" aria-controls="men" aria-selected="true">{{'Men Fashion' | translate}}</a> 
+
+            <a class="nav-link" data-toggle="tab"  href="#women" role="tab" aria-controls="women" aria-selected="true">{{'Women Fashion' | translate}}</a> 
+            <a class="nav-link" data-toggle="tab"  href="#kids" role="tab" aria-controls="kids" aria-selected="true">{{'Kids' | translate}}</a> 
+        </div> 
+        <!-- Tab panes -->
+        <div class="tab-content">
+        
+            <div role="tabpanel" class="tab-pane fade active show" id="all">
+                <ngx-slick-carousel class="carousel row" 
+            #slickModal="slick-carousel" 
+            [config]="slideCategoryTabConfig" >
+
+                    <div ngxSlickItem class="slide col-md-4" *ngFor="let product of products">
+                        <app-product-card  [data]="product"></app-product-card>
+                    </div> 
+
+                </ngx-slick-carousel>
+            <!-- 1st tab --> 
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="men">
+                <ngx-slick-carousel class="carousel row" 
+            #slickModal="slick-carousel" 
+            [config]="slideCategoryTabConfig" >
+
+                    <div ngxSlickItem class="slide col-md-4" *ngFor="let product of products">
+                        <app-product-card  [data]="product"></app-product-card>
+                    </div> 
+
+                </ngx-slick-carousel>
+            <!-- 2nd tab -->
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="women">
+                <ngx-slick-carousel class="carousel row" 
+            #slickModal="slick-carousel" 
+            [config]="slideCategoryTabConfig" >
+
+                    <div ngxSlickItem class="slide col-md-4" *ngFor="let product of products">
+                        <app-product-card  [data]="product"></app-product-card>
+                    </div> 
+
+                </ngx-slick-carousel>
+            <!-- 3rd tab -->
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="kids">
+                <ngx-slick-carousel class="carousel row" 
+            #slickModal="slick-carousel" 
+            [config]="slideCategoryTabConfig" >
+
+                    <div ngxSlickItem class="slide col-md-4" *ngFor="let product of products">
+                        <app-product-card  [data]="product"></app-product-card>
+                    </div> 
+
+                </ngx-slick-carousel>
+            <!-- 4th tab -->
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- banner category -->
+<div class="pro-content categories-content">
+<div class="container-fuild">
+    
+<div class="row">
+    <div class="col-12 col-md-4">
+    <div class="banner-category">
+        <img class="img-fluid" src="assets/images/banners_demo_3/banner_1.jpg" alt="Product Image">
+        <a href="#" class="btn btn-secondary btn-lg swipe-to-top">
+            {{'New' | translate}}
+        </a>
+    </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="banner-category ">
+        <img class="img-fluid" src="assets/images/banners_demo_3/banner_2.jpg" alt="Product Image">
+        <a href="#" class="btn btn-secondary btn-lg swipe-to-top">
+            {{'Trending'  | translate}}
+        </a>
+        </div>
+    </div>
+    <div class="col-12 col-md-4">
+        <div class="banner-category last">
+        <img class="img-fluid" src="assets/images/banners_demo_3/banner_3.jpg" alt="Product Image">
+        <a href="#" class="btn btn-secondary btn-lg swipe-to-top ">
+            {{'Sale'  | translate}}
+        </a>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+
+<!-- Products Tabs -->
+<section class="pro-content pro-bc-content">
+<div class="container"> 
+    <div class="products-area">
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-12">
+            <div class="pro-heading-title">
+                <h2> {{'Popular Categories'  | translate}}
+                </h2>
+                <p>Vitae posuere urna blandit sed. Praesent ut dignissim risus. </p></div>
+                </div>
+            </div>
+        </div>
+    <div class="row">
+        
+    
+        <div class="col-12 col-md-6">
+            <div class="pro-main">
+                <figure class="banner-image">
+                <a href="shop-page1.html"><img class="img-fluid" src="assets/images/banners_demo_3/banner_5.jpg" alt="Banner Image"></a>
+                </figure>
+                <div class="pro-description">
+                    <h2 class="pro-title">
+                        {{'Sunglasses'  | translate}}
+                    </h2>
+                    <p>
+                        Discover the new collection.
+                    </p>
+                    <a href="#" class="btn btn-secondary swipe-to-top" tabindex="0">{{'Discover Now'  | translate}}</a>
+                
+                </div>
+            </div>
+        </div>
+        <div class="col-12 col-md-6">
+            <div class="pro-main last">
+                <figure class="banner-image">
+                    <a href="shop-page1.html">
+                        <img class="img-fluid" src="assets/images/banners_demo_3/banner_4.jpg" alt="Banner Image"></a>
+                    </figure>
+                    <div class="pro-description">
+                        <h2 class="pro-title">
+                            {{'Sneakers'  | translate}}
+                        </h2>
+                        <p>
+                            Protect your every step.
+                        </p>
+                        <a href="#" class="btn btn-secondary swipe-to-top" tabindex="0">{{'Discover Now'  | translate}}</a>
+                    </div>
+            </div>
+            
+            </div>
+    </div>
+
+</div>
+</section>
+
+<!-- Testimonails -->
+<section class="pro-content testimonails-content">
+
+<div class="container">
+    <!-- heading -->
+    
+    <div class="row justify-content-center">
+    <div class="col-12 col-lg-12">
+        <div class="pro-heading-title">
+        <h2> {{'Testimonials our clients'  | translate}}
+        </h2>
+        <p>Vitae posuere urna blandit sed. Praesent ut dignissim risus.</p>
+        </div>
+        </div>
+    </div>
+    <ngx-slick-carousel class="carousel row" 
+            #slickModal="slick-carousel" 
+            [config]="slideTestimonailsConfig" >
+                            
+        <div ngxSlickItem class="slide" >
+            <figure class="banner-image">
+                <img class="img-fluid" src="assets/images/about-us/profile.png" alt="Profile Image">
+            </figure>
+            <div class="pro-detail">
+                <h2><a href="blog-page1.html" >Jeny Martinez</a></h2>
+                
+            <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor
+                incdidunt ut labore et dolore magna aliqua [....]
+                </p>
+                <a href="#" class="pro-readmore" tabindex="0">{{'Read more'  | translate}}</a>
+            </div>
+        </div>
+
+        <div ngxSlickItem class="slide">
+            <figure class="banner-image">
+                <img class="img-fluid" src="assets/images/about-us/profile.png" alt="Banner Image">
+            </figure>
+            <div class="pro-detail">
+                <h2><a href="blog-page1.html" >Theresa May</a></h2>
+            
+            <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor
+                incdidunt ut labore et dolore magna aliqua [....]
+                </p>
+                <a href="#" class="pro-readmore" tabindex="0">{{'Read more'  | translate}}</a>
+            </div>
+        </div>
+        <div ngxSlickItem class="slide">
+            <figure class="banner-image">
+                <img class="img-fluid" src="assets/images/about-us/profile.png" alt="Banner Image">
+            </figure>
+            <div class="pro-detail">
+                <h2><a href="blog-page1.html" >Malissa</a></h2>
+            
+            <p>Lorem ipsum dolor sit amet, sed do eiusmod tempor
+                incdidunt ut labore et dolore magna aliqua [....]
+                </p>
+                <a href="#" class="pro-readmore" tabindex="0">{{'Read more'  | translate}}</a>
+            </div>
+        </div>
+
+   
+    </ngx-slick-carousel>
+</div>
+</section>
+
+
+
+<app-footer-two></app-footer-two>
+<app-footer-mobile></app-footer-mobile>
+<app-accept-cookie></app-accept-cookie>
+
+<app-product-modal></app-product-modal>
+<app-newsletter-modal></app-newsletter-modal>
+<app-back-to-top></app-back-to-top>
+<app-switcher></app-switcher>

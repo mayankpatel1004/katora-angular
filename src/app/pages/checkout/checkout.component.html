@@ -1,0 +1,455 @@
+<app-page-loader></app-page-loader>
+<app-header-one></app-header-one>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+
+<!-- checkout Content -->
+<div class="container-fuild">
+    <nav aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="'/'">{{'Home' | translate}}</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{'Checkout' | translate}}</li>
+            </ol>
+        </div>
+      </nav>
+</div>
+<section class="pro-content checkout-content">   
+    <div class="container"> 
+      <div class="row">
+          <div class="pro-heading-title">
+              <h1>
+                {{'Checkout Page' | translate}}
+              </h1>
+            </div>
+      </div>
+      <div class="row">
+        <div class="col-12 col-xl-9">
+            <div class="row">
+              <div class="checkout-module">
+                <ul class="nav nav-pills checkoutd-nav mb-3" id="pills-tab" role="tablist">
+                    <li class="nav-item">
+                      <a class="nav-link  active" id="pills-shipping-tab" data-toggle="pill" href="#pills-shipping" role="tab" aria-controls="pills-shipping" aria-selected="true"><span class="d-flex d-lg-none">1</span><span class="d-none d-lg-flex">{{'Shipping Address' | translate}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " id="pills-billing-tab" data-toggle="pill" href="#pills-billing" role="tab" aria-controls="pills-billing" aria-selected="false"><span class="d-flex d-lg-none">2</span><span class="d-none d-lg-flex">{{'Billing Address' | translate}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link " id="pills-method-tab" data-toggle="pill" href="#pills-method" role="tab" aria-controls="pills-method" aria-selected="false"><span class="d-flex d-lg-none">3</span><span class="d-none d-lg-flex">{{'Shipping Methods' | translate}}</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link " id="pills-order-tab" data-toggle="pill" href="#pills-order" role="tab" aria-controls="pills-order" aria-selected="false"><span class="d-flex d-lg-none">4</span><span class="d-none d-lg-flex">{{'Order Details' | translate}}</span></a>
+                      </li>
+                  </ul>
+                 
+                  <div class="tab-content" >
+                    <div class="tab-pane fade show active" id="pills-shipping" role="tabpanel" aria-labelledby="pills-shipping-tab">
+                      <form >
+                        <div class="form-row">
+                            <div class="from-group col-md-6 mb-3">
+                                <div class="input-group ">
+                                  
+                                  <input type="text" name="shippingFirstName" [(ngModel)]="shippingFirstName" class="form-control" id="shippingFirstName" value="" placeholder="First Name">
+                                </div>
+                              </div>
+                              <div class="from-group col-md-6 mb-3">
+                                <div class="input-group ">
+                                  
+                                  <input type="text" name="shippingLastName" [(ngModel)]="shippingLastName" class="form-control" id="shippingLastName" placeholder="Last Name">
+                                </div>
+                              </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="from-group col-md-6 mb-3">
+                                <div class="input-group ">
+                                  
+                                  <input type="text" name="shippingCompanyName" [(ngModel)]="shippingCompanyName" class="form-control" id="shippingCompanyName" placeholder="Company Name">
+                                </div>
+                              </div>
+                              <div class="from-group col-md-6 mb-3">
+                                  <div class="input-group ">
+                                    
+                                    <input type="text" name="shippingAddress" [(ngModel)]="shippingAddress" class="form-control" id="shippingAddress" placeholder="Address">
+                                  </div>
+                                </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="from-group col-md-6 mb-3">
+                                <div class="input-group select-control">
+                                  
+                                    <select class="form-control" name="shippingCountry" [(ngModel)]="shippingCountry" id="shippingCountry">
+                                        <option value="">Select Country</option>
+                                        <option value="USA">USA</option>
+                                        <option value="Canada">Canada</option>
+                                      </select>
+                                </div>
+                              </div>
+                              <div class="from-group col-md-6 mb-3">
+                                  <div class="input-group select-control">
+                                    
+                                      <select class="form-control" v name="shippingState" [(ngModel)]="shippingState" id="shippingState">
+                                          <option value="">Select State</option>
+                                          <option  value="New-York">New York</option>
+                                          <option value="Taxes">Taxes</option>
+                                        </select> 
+                                  </div>
+                                </div>
+                          
+                        </div>
+                        
+                        <div class="form-row">
+                            <div class="from-group col-md-6 mb-3">
+                                <div class="input-group"  >
+                                  
+                                    <input type="text" name="shippingCity" [(ngModel)]="shippingCity" id="shippingCity" class="form-control" placeholder="City"> 
+                                </div>
+                              </div>
+                              <div class="from-group col-md-6 mb-3">
+                                  <div class="input-group"  >
+                                    
+                                      <input type="text" name="shippingPostalCode" [(ngModel)]="shippingPostalCode" id="shippingPostalCode" class="form-control" placeholder="Postal Code"> 
+                                  </div>
+                                </div>
+                          
+                        </div>
+                        <div class="form-row">
+                            <div class="from-group col-md-6 mb-3">
+                                <div class="input-group"  >
+                                  
+                                    <input type="text" name="shippingPhone" [(ngModel)]="shippingPhone" id="shippingPhone" class="form-control" placeholder="Phone"> 
+                                </div>
+                              </div>
+                        
+                        </div>
+
+                          <div class="col-12 col-sm-12">
+                            <div class="row">
+                              
+                              <a data-toggle="pill" href="#pills-billing" (click)="addShippingData()" class="btn btn-secondary swipe-to-top cta">{{'Continue' | translate}}</a>
+                            </div>
+                          </div>
+                      </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-billing" role="tabpanel" aria-labelledby="pills-billing-tab">
+                        <form>
+                            <div class="form-row">
+                                <div class="from-group col-md-6 mb-3">
+                                    <div class="input-group ">
+                                      
+                                      <input type="text" name="billingFirstName" [(ngModel)]="billingFirstName" class="form-control" id="billingFirstName" placeholder="First Name">
+                                    </div>
+                                  </div>
+                                  <div class="from-group col-md-6 mb-3">
+                                    <div class="input-group ">
+                                      
+                                      <input type="text" name="billingLastName" [(ngModel)]="billingLastName" class="form-control" id="billingLastName" placeholder="Last Name">
+                                    </div>
+                                  </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="from-group col-md-6 mb-3">
+                                    <div class="input-group ">
+                                      
+                                      <input type="text" name="billingCompanyName" [(ngModel)]="billingCompanyName" class="form-control" id="billingCompanyName" placeholder="Company Name">
+                                    </div>
+                                  </div>
+                                  <div class="from-group col-md-6 mb-3">
+                                      <div class="input-group ">
+                                        
+                                        <input type="text" name="billingAddress" [(ngModel)]="billingAddress" class="form-control" id="billingAddress" placeholder="Address">
+                                      </div>
+                                    </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="from-group col-md-6 mb-3">
+                                    <div class="input-group select-control">
+                                      
+                                        <select class="form-control" name="billingCountry" [(ngModel)]="billingCountry" id="billingCountry">
+                                            <option value="">Select Country</option>
+                                            <option value="1">USA</option>
+                                            <option value="2">Canada</option>
+                                          </select>
+                                    </div>
+                                  </div>
+                                  <div class="from-group col-md-6 mb-3">
+                                      <div class="input-group select-control">
+                                        
+                                          <select name="billingState" [(ngModel)]="billingState" class="form-control" id="billingState">
+                                              <option value="">Select State</option>
+                                              <option value="1">New York</option>
+                                              <option value="2">Taxes</option>
+                                            </select> 
+                                      </div>
+                                    </div>
+                              
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="from-group col-md-6 mb-3">
+                                    <div class="input-group"  >
+                                        <input type="text" name="billingCity" [(ngModel)]="billingCity" class="form-control" id="billingCity" placeholder="City"> 
+                                    </div>
+                                  </div>
+                                  <div class="from-group col-md-6 mb-3">
+                                      <div class="input-group"  >
+                                        
+                                          <input type="text" name="billingPostalCode" [(ngModel)]="billingPostalCode" class="form-control" id="billingPostalCode" placeholder="Postal Code"> 
+                                      </div>
+                                    </div>
+                              
+                            </div>
+                            <div class="form-row">
+                                <div class="from-group col-md-6 mb-3">
+                                    <div class="input-group"  >
+                                      
+                                        <input type="text" name="billingPhone" [(ngModel)]="billingPhone" class="form-control" id="billingPhone" placeholder="Phone"> 
+                                    </div>
+                                  </div>
+                            
+                            </div>
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        
+                                        <input class="form-check-input" type="checkbox" value="" id="defaultCheck0">
+                                        <label class="form-check-label" for="defaultCheck0">
+                                            Same shipping and billing address.
+                                        </label>
+                                        <small id="checkboxHelp" class="form-text text-muted"></small>
+                                      </div>
+                                </div>
+                                            
+                                <div class="col-12 col-sm-12">
+                                <div class="row">
+                                    <a data-toggle="pill" href="#pills-shipping" class="btn btn-light swipe-to-top cta">Back</a>
+                                  <a data-toggle="pill" href="#pills-method" (click)="addBillingData()" class="btn btn-secondary swipe-to-top cta">{{'Continue' | translate}}</a>
+                                  </div>
+                                </div>
+                          </form>
+                    </div>
+                    <div class="tab-pane fade" id="pills-method" role="tabpanel" aria-labelledby="pills-method-tab">
+                      
+                                <div class="col-12 col-sm-12 ">
+                                  <div class="row"> <p>{{'Please select a prefered shipping method to use on this order' | translate}}</p></div>
+                                </div>
+                                
+                                <div class="col-12 col-sm-12 ">
+                                    <div class="row">
+                            
+                                    <div class="col-12 col-sm-6 mb-4 p-0">
+                                        <h4>{{'Flate Rate' | translate}}</h4>
+                                          
+                                        <div class="form-check">
+                                            
+                                          <input class="form-check-input" name="shipMethodRate" [(ngModel)]="shipMethodRate" type="radio" value="11" id="defaultCheck1">
+                                          <label class="form-check-label" for="defaultCheck1">
+                                              Flat Rate $11
+                                          </label>
+                                          <small id="emailHelp" class="form-text text-muted"></small>
+                                        </div>
+                                          
+                                    </div>
+                                    <div class="col-12 col-sm-6 p-0">
+                                        <h4>{{'UPS Shipping' | translate}}</h4>
+                                          
+                                              <div class="form-check mb-2">
+                                                  
+                                                  <input class="form-check-input" name="shipMethodRate" [(ngModel)]="shipMethodRate" type="radio" value="15" id="defaultCheck2">
+                                                  <label class="form-check-label" for="defaultCheck2">
+                                                      24 hours $15
+                                                  </label>
+                                                  
+                                                </div>
+                                          
+                                              <div class="form-check mb-2">
+                                                  
+                                                  <input class="form-check-input" name="shipMethodRate" [(ngModel)]="shipMethodRate" type="radio" value="10" id="defaultCheck3">
+                                                  <label class="form-check-label" for="defaultCheck3">
+                                                      48 hours $10
+                                                  </label>
+                                                  
+                                                </div>
+
+                                              <div class="form-check mb-4">
+                                                  
+                                                  <input class="form-check-input" name="shipMethodRate" [(ngModel)]="shipMethodRate" type="radio" value="5" id="defaultCheck4">
+                                                  <label class="form-check-label" for="defaultCheck4">
+                                                      72 hours $5
+                                                  </label>
+                                                  
+                                                </div>
+                                        
+                                    </div>
+                                  </div>
+                                  </div>
+                                  <div class="col-12 col-sm-12">
+                                      <div class="row">
+                                          <a data-toggle="pill" href="#pills-billing" class="btn btn-light swipe-to-top cta">Back</a>
+
+                                        <a  data-toggle="pill" href="#pills-order" (click)="addShipMethodData()" class="btn btn-secondary swipe-to-top cta">{{'Continue' | translate}}</a>
+                                        </div>
+                                      </div>
+                            
+                      
+                    </div>
+                    <div class="tab-pane fade" id="pills-order" role="tabpanel" aria-labelledby="pills-order-tab">
+                      <table class="table top-table">
+                        <thead>
+                          <tr class="d-flex">
+                            <th class="col-12 col-md-2">{{'ITEM(S)' | translate}}</th>
+                            <th class="col-12 col-md-4"></th>
+                            <th class="col-12 col-md-2">{{'PRICE' | translate}}</th>
+                            <th class="col-12 col-md-2">{{'QTY' | translate}}</th>
+                            <th class="col-12 col-md-2">{{'SUBTOTAL' | translate}}</th>
+                          </tr>
+                        </thead>
+                        
+                        <tbody>
+                            <tr class="d-flex" *ngFor="let data of productAddedToCart">
+                              <td class="col-12 col-md-2" >
+                                  <img class="img-fluid" src="{{data.products_image}}" alt="Product Image"/>
+                              </td>
+                                <td class="col-12 col-md-4">
+                                  <div class="item-detail">
+                                      <span class="pro-info">{{data.categories.categories_name | translate}}</span>
+                                      <h2 class="pro-title">
+                                          
+                                        <a href="#">
+                                          {{data.products_name | translate}}
+                                      </a>
+                                       
+                                      </h2>
+                                      
+                                      <div class="item-attributes"></div>
+                                      <div class="item-controls">
+                                          <button type="button" class="btn" >
+                                              <span class="fas fa-pencil-alt" [routerLink]="'/cart-one'"></span>
+                                          </button>
+                                          
+                                      </div>
+                                    </div>
+                                </td>
+                              <td class="item-price col-12 col-md-2">{{data.products_price | currency}}</td>
+                              <td class="col-12 col-md-2">
+                                  <div class="input-group">
+                                    {{data.products_quantity}}
+                                  </div>
+                              </td>
+                              <td class="align-middle item-total col-12 col-md-2">{{data.products_price * data.products_quantity | currency}}</td>
+                            </tr>
+
+                        </tbody>
+                        
+                      </table>
+                          <div class="col-12 col-sm-12">
+                              <div class="row">
+                                  <div class="heading">
+                                      <h4>{{'Order Notes & Summary' | translate}}</h4>
+                                      
+                                    </div>
+                                
+                                <div class="form-group" style="width:100%; padding:0;">
+                                    <label for="exampleFormControlTextarea1">{{'Please write notes of your order' | translate}}</label>
+                                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                                  </div>
+                              </div>
+                                
+                          </div>
+                          <div class="col-12 col-sm-12 ">
+                              <div class="row">
+                                <div class="heading">
+                                  <h4>{{'Payment Methods' | translate}}</h4>
+                                  
+                                </div>
+                                <div class="form-group" style="width:100%; padding:0;">
+                                    <label for="exampleFormControlTextarea1" style="width:100%; margin-bottom:30px;">{{'Please select a prefered payment method to use on this order.' | translate}}</label>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="paymentMethodData" [(ngModel)]="paymentMethodData" id="inlineCheckbox1" value="paypal">
+                                        <label class="form-check-label" for="inlineCheckbox1"><img src="assets/images/miscellaneous/paypal.png" alt="Image"></label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio"  name="paymentMethodData" [(ngModel)]="paymentMethodData" id="inlineCheckbox2" value="braintree">
+                                        <label class="form-check-label" for="inlineCheckbox2"><img src="assets/images/miscellaneous/braintree.png" alt="Image"></label>
+                                      </div>
+                                      <div class="form-check form-check-inline">
+                                          <input class="form-check-input" type="radio"  name="paymentMethodData" [(ngModel)]="paymentMethodData" id="inlineCheckbox3" value="stripe">
+                                          <label class="form-check-label" for="inlineCheckbox3"><img src="assets/images/miscellaneous/stripe.png" alt="Image"></label>
+                                        </div>
+                                        <div class="form-check form-check-inline">
+                                            <input class="form-check-input" type="radio"  name="paymentMethodData" [(ngModel)]="paymentMethodData" id="inlineCheckbox4" value="COD">
+                                            <label class="form-check-label" for="inlineCheckbox4"><img src="assets/images/miscellaneous/cod.png" alt="Image"></label>
+                                          </div>
+                                          <div class="form-check form-check-inline">
+                                              <input class="form-check-input" type="radio"  name="paymentMethodData" [(ngModel)]="paymentMethodData" id="inlineCheckbox5" value="instamojo">
+                                              <label class="form-check-label" for="inlineCheckbox5"><img src="assets/images/miscellaneous/instamojo.png" alt="Image"></label>
+                                            </div>
+                                            <div class="form-check form-check-inline">
+                                                <input class="form-check-input" type="radio" name="paymentMethodData" [(ngModel)]="paymentMethodData" id="inlineCheckbox6" value="hyperpay">
+                                                <label class="form-check-label" for="inlineCheckbox6"><img src="assets/images/miscellaneous/hyperpay.png" alt="Image"></label>
+                                              </div>
+                                  </div>
+                              </div>
+                              
+                                
+                          </div>
+                          <div class="col-12 col-sm-12">
+                              <div class="row">
+                                <a data-toggle="pill" href="#pills-method"  class="btn btn-light swipe-to-top cta">Back</a>
+                              <a href="thankyou.html" (click)="addPaymentMethodData()" class="btn btn-secondary swipe-to-top" [routerLink]="'/thank-you'">{{'PlaceOrder' | translate}}</a>
+                              </div>
+                          </div>
+                    </div>
+                  </div>
+            </div>
+            </div>
+        </div>
+        <div class="col-12 col-xl-3">
+            <table class="table right-table">
+              <thead>
+                <tr>
+                  <th scope="col" colspan="2">{{'Order Summary' | translate}}</th>
+                  
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <th scope="row">{{'Subtotal' | translate}}</th>
+                  <td >{{productTotal | currency}}</td>
+                  
+                </tr>
+                <tr>
+                  <th scope="row">{{'Coupon Code' | translate}}</th>
+                  <td >$20.00</td>
+                  
+                </tr>
+                <tr>
+                    <th scope="row">{{'TAX' | translate}}</th>
+                    <td >$150.00</td>
+                    
+                  </tr>
+                  <tr>
+                      <th scope="row">FLat Rate Shipping</th>
+                      <td >$11.00</td>
+                      
+                    </tr>
+                <tr class="item-price">
+                  <th scope="row">{{'Total' | translate}}</th>
+                  <td >{{productTotal | currency}}</td>
+                  
+                </tr>
+              </tbody>
+            </table>
+            
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+<app-footer-mobile></app-footer-mobile>
+<app-footer-three></app-footer-three>
+<app-accept-cookie></app-accept-cookie>
+
+<app-newsletter-modal></app-newsletter-modal>
+<app-back-to-top></app-back-to-top>
+<app-switcher></app-switcher>

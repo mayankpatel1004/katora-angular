@@ -1,0 +1,44 @@
+<!-- //Sticky Header -->
+<header id="stickyHeader" class="header-area header-sticky d-none" >
+    <div class="header-maxi bg-sticky-bar">
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-12 col-sm-12 col-lg-2">
+            <app-logo></app-logo>
+          </div>
+          
+          <div class="col-12 col-sm-8" style="position:static;">      
+            <app-menu></app-menu>
+          </div>
+          <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+            <ul class="pro-header-right-options">
+
+              <li class="dropdown">
+                  
+                <button type="button" id="dropdownSearch" class="btn dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                  <i class="fas fa-search"></i>
+                </button>
+                <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSearch">
+                    <form>
+                        <div class="search-field-module">
+                            <input  type="search" placeholder="Search Products..." data-toggle="tooltip" data-placement="bottom" title="search item">
+                            <button class="btn" type="submit">
+                                <i class="fas fa-search"></i>
+                            </button>
+                        </div>
+                      </form>
+                </div>
+
+              </li>
+              <li>
+                <app-wishlist-button></app-wishlist-button>
+              </li>
+              <li class="dropdown">
+                <app-cart-dropdown></app-cart-dropdown>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div> 
+  </header>

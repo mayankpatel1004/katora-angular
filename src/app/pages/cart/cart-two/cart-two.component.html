@@ -1,0 +1,191 @@
+<app-page-loader></app-page-loader>
+<app-header-one></app-header-one>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+
+<!-- cart Content -->
+<div class="container-fuild">
+  <nav aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="'/'">{{ 'Home' | translate }}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ 'Cart Page' | translate }}</li>
+        </ol>
+    </div>
+  </nav>
+</div>
+
+<section class="pro-content cart-content" *ngIf="productAddedToCart.length!=0">      
+  <div class="container"> 
+      <div class="row">
+          <div class="pro-heading-title">
+              <h1>
+                {{ 'Cart Page' | translate }}
+              </h1>
+            </div>
+      </div>
+<div class="row">
+    <div class="col-12 col-sm-12">
+        <table class="table top-table">
+            
+            <tbody>
+            
+              <tr class="d-flex" *ngFor="let data of productAddedToCart">
+                  <td class="col-12 col-md-1">
+                    <img class="img-fluid" src="{{data.products_image}}" alt="Product Image"/>
+                  </td>
+                  <td class="col-12 col-md-4 ">
+                      <div class="item-detail">
+                          <span class="pro-info">{{data.categories.categories_name | translate}}</span>
+                          <h2 class="pro-title">
+                              
+                            <a [routerLink]="'/product-one'">
+                              {{data.products_name | translate}}
+                            </a>
+                           
+                          </h2>
+                        
+                          <div class="item-attributes"></div>
+                          
+                      </div>
+                  </td>
+                  <td class="col-12 col-md-2 item-price">{{data.products_price | currency}}</td>
+                  <td class="col-12 col-md-2" >
+                    <div class="input-group item-quantity">
+                        
+                      <input type="text" name="quantity" class="form-control" value="{{data.products_quantity}}" readonly>
+                      
+                          <span class="input-group-btn">
+                              <button type="button"  (click)="addQuantity(data)" class="quantity-plus btn"  data-type="minus" data-field="">
+                                <span class="fas fa-plus"></span>
+                              </button>
+                          
+                              <button type="button" [disabled]="data.products_quantity==1" (click)="removeQuantity(data)"  class="quantity-minus btn" data-type="plus" data-field="">
+                                  <span class="fas fa-minus"></span>
+                              </button>
+                          </span>
+                      
+
+                  </div>
+                  </td>
+                  <td class="col-12 col-md-1 item-total">{{data.products_price * data.products_quantity | currency}}</td>
+                  <td class="col-12 col-md-2 align-right">
+                    <div class="item-controls">
+                      <button type="button" class="btn" >
+                          <span class="fas fa-pencil-alt"></span>
+                      </button>
+                      <button type="button" class="btn" (click)="removeProduct(data)">
+                          <span class="fas fa-times"></span>
+                      </button>
+                  </div>
+                  </td>
+                
+              </tr>
+              
+            </tbody>
+          </table>
+    </div>
+  
+</div>
+<div class="row">
+      
+    <div class="col-12 col-lg-9 ">
+        <table class="table table-background">
+            <thead>
+              <tr>
+                <th scope="col" colspan="4">{{'CALCULATE SHIPPING' | translate}}</th>
+                
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="d-flex">
+                <td scope="row">
+                    <input type="text" class="form-control" id="city" aria-describedby="city" placeholder="City">
+                </td>
+                <td><input type="text" class="form-control" id="country" aria-describedby="country" placeholder="Country"></td>
+                <td><input type="text" class="form-control" id="postcode" aria-describedby="postcode" placeholder="Post Code"></td>
+                <td><button class="btn btn-block btn-secondary swipe-to-top" type="button">{{'Estimate' | translate}}</button></td>
+              </tr>
+              
+            </tbody>
+          </table>
+        <div class="col-12 col-sm-12 mb-4">
+            <div class="row justify-content-between ">
+                <div class="col-12 col-lg-5">
+                  
+                  <div class="row">
+                      <div class="input-group ">
+                          <input type="text" class="form-control" style="height: 44px;" placeholder="Coupon Code" aria-label="Coupon Code" aria-describedby="coupon-code">
+                          <div class="input-group-append">
+                            <button class="btn btn-secondary swipe-to-top" type="button" id="coupon-code">{{'Apply' | translate}}</button>
+                          </div>
+                        </div>
+                  </div>
+                  
+                </div>
+                <div class="col-12 col-lg-7">
+                    
+                    <div class="row justify-content-end btn-res">
+                        <button type="button" class="btn btn-link">{{'Continue Shopping' | translate}}</button>
+                        <button type="button" class="btn btn-primary swipe-to-top">{{'Update' | translate}}</button>
+                    </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    <div class="col-12 col-lg-3">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col" colspan="2" >{{'Order Summary'| translate}}</th>
+            
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">{{'Subtotal'| translate}}</th>
+            <td >{{productTotal | currency}}</td>
+            
+          </tr>
+          <tr>
+            <th scope="row">{{'Coupon Code'| translate}}</th>
+            <td >$20.00</td>
+            
+          </tr>
+          <tr class="item-price">
+            <th scope="row">{{'Total'| translate}}</th>
+            <td >{{productTotal | currency}}</td>
+            
+          </tr>
+        </tbody>
+      </table>
+      <button [routerLink]="'/checkout'" class="btn btn-secondary btn-block swipe-to-top">{{'Proceed to checkout' | translate}}</button>
+    </div>
+  </div>
+</div>
+</section>
+
+<section class="empty-content" *ngIf="productAddedToCart.length==0">
+<div class="container" >
+  <div class="row" >
+    <div class="col-12">
+      <div class="pro-empty-page">
+        <h2 style="font-size: 150px;"><i class="fas fa-shopping-cart"></i></h2>
+        <h1>{{'Your Cart is empty' | translate}}</h1>
+        <p><button class="btn btn-secondary" [routerLink]="'/shop-one'">{{'Continue Shopping' | translate}}</button></p>
+      </div>
+    
+  </div>
+  </div>
+</div>
+</section>
+    
+
+<app-footer-mobile></app-footer-mobile>
+<app-footer-three></app-footer-three>
+<app-accept-cookie></app-accept-cookie>
+
+<app-newsletter-modal></app-newsletter-modal>
+<app-back-to-top></app-back-to-top>
+<app-switcher></app-switcher>

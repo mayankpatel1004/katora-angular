@@ -1,0 +1,135 @@
+<app-page-loader></app-page-loader>
+<app-header-one></app-header-one>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+<!-- Compare Content -->
+<div class="container-fuild">
+    <nav aria-label="breadcrumb">
+        <div class="container">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item"><a [routerLink]="'/'">{{'Home' | translate}}</a></li>
+              <li class="breadcrumb-item active" aria-current="page">{{'Compare' | translate}}</li>
+            </ol>
+        </div>
+      </nav>
+</div>
+<section class="pro-content compare-content">
+  <div class="container">
+      <div class="row">
+          <div class="pro-heading-title">
+              <h1>
+                {{'Compare Page' | translate}}
+              </h1>
+            </div>
+      </div>
+    <div class="row">
+      <div class="col-12 col-md-6">
+          <table class="table">
+              <thead>
+                <tr>
+                    <td>
+                        <div class="img-div">
+                            <img class="img-fluid" src="assets/images/compare/compare_1.jpg" alt="Product Image">
+                        </div>
+                       
+                      </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>{{'Austrian Crystals Wedding Ring' | translate}}</h4>
+                  </td>
+                  
+                </tr>      
+                <tr>
+                  <td><span>{{'Price' | translate}}&nbsp;:&nbsp;</span><span class="price-tag">$285</span></td>
+                  
+                </tr>
+                <tr>
+                  <td><span>{{'Color' | translate}}&nbsp;:&nbsp;</span>{{'Gold Daimond' | translate}}</td>
+                  
+                </tr>
+                <tr>
+                  <td><span>{{'Size' | translate}}&nbsp;:&nbsp;</span>28</td>
+                  
+                </tr>
+                <tr>
+                  <td><span>{{'Type' | translate}}&nbsp;:&nbsp;</span>{{'Rings' | translate}}</td>
+                  
+                </tr>
+                <tr>
+                  <td>
+                    <div class="detail-buttons">
+                        <a [routerLink]="'/product-one'" class="btn btn-secondary swipe-to-top">{{'View Details' | translate}}</a>
+                        <div class="share"><a [routerLink]="'/compare'">{{'Share' | translate}} &nbsp;<i class="fas fa-share"></i></a> </div>
+                    </div>
+                   
+                  </td>
+                  
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      <div class="col-12 col-md-6">
+          <table class="table">
+              <thead>
+                  <tr>
+                <td >
+                  <div class="img-div">
+                      <img class="img-fluid" src="assets/images/compare/compare_2.jpg" alt="Product Image">
+                  </div>
+                 
+                </td>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <h4>{{'Austrian Crystals Engagement Ring' | translate}}</h4>
+                  </td>
+                  
+                </tr>      
+                <tr>
+                  <td><span>{{'Price' | translate}}&nbsp;:&nbsp;</span><span class="price-tag">$85</span></td>
+                  
+                </tr>
+                <tr>
+                  <td><span>{{'Color' | translate}}&nbsp;:&nbsp;</span>{{'Gold Crystal' | translate}}</td>
+                  
+                </tr>
+                <tr>
+                  <td><span>{{'Size' | translate}}&nbsp;:&nbsp;</span>26</td>
+                  
+                </tr>
+                <tr>
+                  <td><span>{{'Type' | translate}}&nbsp;:&nbsp;</span>{{'Rings' | translate}}</td>
+                  
+                </tr>
+                <tr>
+                  <td>
+                    <div class="detail-buttons">
+                        <a [routerLink]="'/product-one'" class="btn btn-secondary swipe-to-top">{{'View Details' | translate}}</a>
+                        <div class="share"><a [routerLink]="'/compare'">{{'Share' | translate}} &nbsp;<i class="fas fa-share"></i></a> </div>
+                    </div>
+                   
+                  </td>
+                  
+                </tr>
+              </tbody>
+            </table>
+      </div>
+      
+    </div>
+    
+  </div>  
+</section>
+
+<app-footer-mobile></app-footer-mobile>
+<app-footer-three></app-footer-three>
+<app-accept-cookie></app-accept-cookie>
+
+<app-newsletter-modal></app-newsletter-modal>
+<app-back-to-top></app-back-to-top>
+<app-switcher></app-switcher>

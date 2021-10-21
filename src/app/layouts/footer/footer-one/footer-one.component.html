@@ -1,0 +1,109 @@
+<!-- //Footer Style One -->
+<footer id="footerOne" class="footer-area footer-one footer-desktop d-none d-lg-block d-xl-block">
+  <div class="container">
+    <div class="row">
+      <div class="col-12 col-lg-3">
+        <div class="single-footer">
+            
+          <div class="pro-about">
+              <h5>Store</h5>
+          
+              <ul class="pl-0 mb-0">
+                <li><app-logo></app-logo></li>
+                <li> <span>{{'1223, Main Street, Anytown New York, 38000 USA' | translate}}</span> </li>
+                <li><span>888 - 963 - 600</span><span><a href="mailto:info@example.com">info@example.com</a> </span> </li>
+          
+              </ul>
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-2">
+          <div class="single-footer">
+              <h5>Info</h5>
+              
+              <ul class="pl-0 mb-0">
+                <li> <a [routerLink]="'/'" >{{'Home' | translate}}</a> </li>
+                <li> <a [routerLink]="'/blog-one'">{{'Blog' | translate}}</a> </li>
+                <li> <a [routerLink]="'/about-one'">{{'About Us' | translate}}</a> </li>
+                <li> <a [routerLink]="'/contact-one'">{{'Contact Us' | translate}}</a> </li>
+              </ul>
+            </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-2">
+          <div class="single-footer">
+            <h5>Our Polices</h5>
+            
+            <ul class="pl-0 mb-0">
+                <li> <a [routerLink]="'/'">{{'FAQs' | translate}}</a> </li>
+                  <li> <a [routerLink]="'/privacy'">{{'Privacy Policy' | translate}}</a> </li>
+                  <li> <a [routerLink]="'/refund'">{{'Refund Policy' | translate}}</a> </li>
+                  <li> <a [routerLink]="'/terms'">{{'Terms of Service' | translate}}</a> </li>       
+                  
+            </ul>
+          </div>
+        </div>
+      <div class="col-12 col-md-6 col-lg-2">
+        <div class="single-footer">
+          <h5>My Account</h5>
+          
+          <ul class="pl-0 mb-0">
+            
+            <li> <a [routerLink]="'/shop-one'">{{'Shop' | translate}}</a> </li>
+            <li> <a [routerLink]="'/my-orders'">{{'Orders' | translate}}</a> </li>
+            <li> <a [routerLink]="'/cart-one'">{{'Shopping Cart' | translate}}</a> </li>           
+              <li> <a [routerLink]="'/wishlist'">{{'Wishlist' | translate}}</a> </li>  
+          </ul>
+        </div>
+      </div>
+      
+      <div class="col-12 col-lg-3">
+        <div class="single-footer">
+            <div class="pro-newsletter">
+                <h5>Newsletter</h5>
+
+                <form class="form-inline">
+                  <div class="search"> 
+                    <input  type="search" placeholder="Your Email ...">
+                    
+                      <button class="btn btn-secondary swipe-to-top" type="submit">
+                          <i class="fas fa-location-arrow"></i>
+                      </button>
+                  </div>
+                  
+                </form>
+                
+                <p>{{'By entering your email, you agree to our Terms of Service and Privacy Policy.' | translate}}</p>
+            </div>
+            
+            <div class="pro-socials">
+                <h5>Follow Us</h5>
+                <ul>
+                    <li><a [routerLink]="'/'" class="fab fb fa-facebook-square"></a></li>
+                    <li><a [routerLink]="'/'" class="fab tw fa-twitter-square"></a></li>
+                    <li><a [routerLink]="'/'" class="fab sk fa-skype"></a></li>
+                    <li><a [routerLink]="'/'" class="fab ln fa-linkedin"></a></li>
+                    <li><a [routerLink]="'/'" class="fab ig fa-instagram"></a></li>
+                </ul>
+            </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="container-fluid p-0">
+      <div class="copyright-content">
+          <div class="container">
+            <div class="row align-items-center">
+                
+                <div class="col-12 col-sm-12">
+                  <div class="footer-info">
+                      &copy;&nbsp;2019 Company, Inc. <a [routerLink]="'/privacy'">{{'Privacy' | translate}}</a>&nbsp;&bull;&nbsp;<a [routerLink]="'/terms'">{{'Terms' | translate}}</a>
+                  </div>
+                  
+                </div>
+            </div>
+          </div>
+          
+        </div>
+  </div>
+</footer>

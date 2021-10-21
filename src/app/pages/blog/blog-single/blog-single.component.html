@@ -1,0 +1,74 @@
+<app-page-loader></app-page-loader>
+<app-header-one></app-header-one>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+<!-- Site Content -->
+<div class="container-fuild">
+  <nav aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="'/'">{{ 'Home' | translate }}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ 'Blog' | translate }}</li>
+        </ol>
+    </div>
+  </nav>
+  </div>
+ <section class="pro-content blog-content blog-content-page">
+    <div class="container"> 
+        <div class="row">
+            <div class="pro-heading-title">
+                <h1>
+                  {{ 'Blog Single Page' | translate }}
+                </h1>
+              </div>
+        </div>
+        <div class="row">
+        
+          <div class="col-12 col-lg-8">
+            
+      <div class="blog-area">
+
+              <div class="row">
+                  <div class="col-12 col-sm-12"  *ngFor="let blog of blogs | slice:0:1">
+                      <div class="blog">
+                        <div class="blog-thumbnail">
+                            <div class="blog-date">
+                              {{blog.author.post_date}}
+                            </div>
+                          <img class="img-thumbnail" src="{{blog.image}}" alt="Thumbnail">
+                          
+                        </div>
+                        
+                        
+                        <h1>
+                          {{blog.name}}
+                        
+                          
+                          </h1>
+                            <p class="text-wrap">
+                              {{blog.content}}
+                                </p>
+                      </div>
+                  </div>
+                  
+                  
+              </div>
+              </div>
+            </div>
+          
+            <div class="col-12 col-lg-4  d-lg-block d-xl-block blog-menu"> 
+         
+              <app-blog-sidebar></app-blog-sidebar>
+              </div>
+          </div>
+    </div>
+  </section>
+
+  <app-footer-mobile></app-footer-mobile>
+  <app-footer-three></app-footer-three>
+  <app-accept-cookie></app-accept-cookie>
+  
+  <app-newsletter-modal></app-newsletter-modal>
+  <app-back-to-top></app-back-to-top>
+  <app-switcher></app-switcher>

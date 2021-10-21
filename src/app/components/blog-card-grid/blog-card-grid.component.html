@@ -1,0 +1,17 @@
+<div class="pro-blog" >
+  <div class="pro-thumb">
+            
+    <div class="blog-date">{{data.author.post_date}}</div>
+    
+    
+    <img class="img-fluid swipe-to-top" src="{{data.image}}" alt="Image">
+    
+  </div>
+  <div class="pro-detail">
+      <h2><a [routerLink]="'/blog-single-post'">{{data.name | translate}}</a></h2>
+    
+    <p>{{data.short_content}}[...]
+      </p>
+      <a [routerLink]="'/blog-single-post'" class="pro-readmore" tabindex="0">{{'Read more' | translate}}</a>
+  </div>
+</div>

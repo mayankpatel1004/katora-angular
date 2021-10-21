@@ -1,0 +1,67 @@
+<!-- //header style Two -->
+<header id="headerTwo" class="header-area header-two header-desktop">
+
+    <app-alert-header></app-alert-header>
+
+  <div class="header-mini bg-top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+
+        <div class="col-12 col-md-4 ">
+          <h4>Call us: <strong>888 - 963 - 600</strong></h4>
+        </div>
+        <div class="col-12 col-md-8">
+            <div class="pro-header-options">
+            
+                <app-account-dropdown></app-account-dropdown>
+              <app-langauge-dropdown></app-langauge-dropdown>
+                    <app-currency-dropdown></app-currency-dropdown>
+            </div>
+            
+            
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="header-maxi bg-header-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12 col-sm-12 col-lg-2">
+            <app-logo></app-logo>
+        </div>
+        
+        <div class="col-12 col-sm-8 nav-start">      
+            <app-menu></app-menu>
+        </div>
+        <div class="col-6 col-sm-6 col-md-4 col-lg-2">
+          <ul class="pro-header-right-options">
+
+              <li class="dropdown">
+                  
+                  <button type="button" id="dropdownSearch2" class="btn dropdown-toggle" aria-haspopup="true" aria-expanded="false" data-toggle="dropdown">
+                      <i class="fas fa-search"></i>
+                    </button>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="dropdownSearch2">
+                        <form>
+                            <div class="pt-col">
+                                <input type="text" class="pt-search-input" placeholder="Search products...">
+                                <button class="btn pt-btn-search" type="submit">
+                                    <i class="fas fa-search"></i>
+                                </button>
+                            </div>
+                          </form>
+                    </div>
+
+                </li>
+            <li>
+              <app-wishlist-button></app-wishlist-button>
+            </li>
+            <li class="dropdown" data-toggle="tooltip" data-placement="bottom" title="cart">
+                <app-cart-dropdown></app-cart-dropdown>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> 
+</header>

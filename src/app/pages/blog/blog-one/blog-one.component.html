@@ -1,0 +1,96 @@
+<app-page-loader></app-page-loader>
+<app-header-one></app-header-one>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+<!-- Site Content -->
+<div class="container-fuild">
+  <nav aria-label="breadcrumb">
+    <div class="container">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a [routerLink]="'/'">{{ 'Home' | translate }}</a></li>
+          <li class="breadcrumb-item active" aria-current="page">{{ 'Blog' | translate }}</li>
+        </ol>
+    </div>
+  </nav>
+  </div>
+  <section class="pro-content blog-content blog-content-page">
+    <div class="container"> 
+        <div class="row">
+            <div class="pro-heading-title">
+                <h1>
+                  {{ 'Blog Page' | translate }}
+                </h1>
+              </div>
+        </div>
+
+        <div class="row">
+            
+          <div class="col-12 col-lg-8">
+            <div class="blog-area">
+              <div class="row">
+                  <div class="col-12 col-sm-12 col-md-6" *ngFor="let blog of blogs">
+                      <div class="blog">
+                        <div class="blog-thumbnail">
+                          
+                              <img class="img-thumbnail" src="{{blog.image}}"  alt="Thumbnail">
+                          
+                          <div class="blog-date">
+                            {{blog.author.post_date}}
+                          </div>
+                          <div class="badge badge-primary"><a [routerLink]="'/blog-one'">Share</a><i class="fas fa-share"></i></div>
+                        </div>
+                        
+                        
+                        <h4 ><a [routerLink]="'/blog-single-post'">{{blog.name}}</a></h4>
+                            <p>
+                              {{blog.short_content}} <a [routerLink]="'/blog-single-post'">{{ 'Read More..' | translate }}</a>
+                            </p>
+                      </div>
+                  </div>
+                  
+                  
+                  
+              </div>
+              <div class="row">
+                <div class="col-12">
+                  <div class="pagination justify-content-between ">
+                  
+                    <label  class="col-form-label">Showing 1&ndash;<span class="showing_record">1</span>&nbsp;of&nbsp;<span class="showing_total_record">23</span>&nbsp;results.</label>                                           
+                
+                    <div class="col-12 col-sm-6">
+                        <ol class="loader-page">
+                          <li class="loader-page-item">
+                            <a [routerLink]="'/blog-one'"><i class="fa fa-angle-double-left" style="font-size:12px"></i></a>
+                          </li>
+                          <li  class="loader-page-item"><a [routerLink]="'/blog-one'">1</a></li>
+                          <li  class="loader-page-item"><a [routerLink]="'/blog-one'">2</a></li>
+                          <li  class="loader-page-item"><a [routerLink]="'/blog-one'">3</a></li>
+                          <li  class="loader-page-item"><a [routerLink]="'/blog-one'">4</a></li>
+                          <li  class="loader-page-item">
+                            <a [routerLink]="'/blog-one'"><i class="fa fa-angle-double-right" style="font-size:12px"></i></a>
+                          </li>
+                        </ol>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+          </div>
+          
+          <div class="col-12 col-lg-4  d-lg-block d-xl-block blog-menu"> 
+            <app-blog-sidebar></app-blog-sidebar>
+              
+          </div>
+        </div>
+      </div>
+  </section>
+
+  <app-footer-mobile></app-footer-mobile>
+  <app-footer-three></app-footer-three>
+  <app-accept-cookie></app-accept-cookie>
+  
+  <app-newsletter-modal></app-newsletter-modal>
+  <app-back-to-top></app-back-to-top>
+  <app-switcher></app-switcher>

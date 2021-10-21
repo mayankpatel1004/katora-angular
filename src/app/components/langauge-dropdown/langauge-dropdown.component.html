@@ -1,0 +1,12 @@
+<div class="dropdown">
+    <button type="button" class="dropdown-toggle" >
+      <span *ngIf="current_language=='en'">English</span>
+      <span *ngIf="current_language=='ar'">Arabic</span>
+    </button>
+    <div class="dropdown-menu">
+      <button type="button" class="dropdown-item" (click)="setLanguage('en')">English</button>
+      <button type="button" class="dropdown-item" (click)="setLanguage('ar')">Arabic</button>
+      
+      
+    </div>
+  </div>

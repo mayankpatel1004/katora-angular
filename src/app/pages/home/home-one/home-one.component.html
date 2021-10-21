@@ -1,0 +1,357 @@
+<app-page-loader></app-page-loader>
+<app-header-one></app-header-one>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+
+
+<ngx-slick-carousel class="carousel Modern-Slider" 
+              #slickModal="slick-carousel" 
+              [config]="slideConfigCarousel" >
+              <div ngxSlickItem class="slide item">
+                <div class="img-fill">
+
+                  <div class="info" style="background-image: url(assets/images/slick_carousel_demo/Slider_01_02.jpg);">
+                    <div class="container">
+                      <div class="info_center">
+                        <h5>{{'Make your dreams true' | translate}}</h5>
+                        <h2>{{'Be Vibrant with' | translate}} <br>{{'Matchless Jewelry' | translate}}</h2>
+                        <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                <div ngxSlickItem class="slide item">
+                  <div class="img-fill">
+
+                    <div class="info"  style="background-image: url(assets/images/slick_carousel_demo/Slider_01_01.jpg);">
+                      <div class="container">
+                        <div class="info_left">
+                          <h5>{{'Frenzi Sale on Jewelry' | translate}}</h5>
+                          <h2>{{'Every Big Girl Needs' | translate}}<br>{{'Attractive Jewelry' | translate}}</h2>
+                          <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div ngxSlickItem class="slide item">
+                  <div class="img-fill">
+
+                    <div class="info" style="background-image: url(assets/images/slick_carousel_demo/Slider_01_03.jpg);">
+                      <div class="container">
+                        <div class="info_right">
+                          <h5>{{'Wedding season ornaments' | translate}}</h5>
+                          <h2>{{'Choose The Best'| translate}}<br>{{'Jewelry Collection' | translate}}</h2>
+                          <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+</ngx-slick-carousel>
+
+
+
+<!-- Banners -->
+<div class="banners-content">
+  <!-- //banner twelve -->
+  <div class="banner-twelve">
+
+        <div class="container-fluid">
+            <div class="group-banners">
+                <div class="row">
+                    <div class="col-12 col-sm-12 col-lg-3">
+                          
+                        <figure class="banner-image">
+                           <div class="captions">
+                            <a [routerLink]="'/shop-one'">
+                              <img class="img-fluid" src="assets/images/banners/banner_2.jpg" alt="Banner Image">
+                            <div class="banner-caption left-caption">
+                              <h2>{{'Vibrant Earrings' | translate}}<small>{{'Great Deals' | translate}}</small></h2>
+                              
+
+                            </div>
+                           </a>
+                           </div>
+                          </figure>
+
+                    
+                      <figure class="banner-image mt-image">
+                          <div class="captions">
+                          <a [routerLink]="'/shop-one'">
+                        <img class="img-fluid" src="assets/images/banners/banner_4.jpg" alt="Banner Image">
+                        <div class="banner-caption left-caption">
+                          <h2>{{'Jewelry Gifts' | translate}}<small>{{'Best Match' | translate}}</small></h2>
+
+                          
+
+                        </div>
+                        </a>
+                      </div>
+                      </figure>
+                    
+                </div>
+                    <div class="col-12 col-sm-12 col-lg-6">
+
+                          <figure class="banner-image">
+                              <div class="captions">
+                            <img class="img-fluid " src="assets/images/banners/banner_1.jpg" alt="Banner Image">
+                            <div class="banner-caption left-caption">
+                              <h2>{{'Latest Designs of Pendant' | translate}}<small>{{'Designer Jewelry' | translate}}</small></h2>
+                              
+                              <a [routerLink]="'/shop-one'" class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</a>
+
+                            </div>
+                          </div>
+                          </figure>
+                          
+
+                      </div>
+                      
+                      <div class="col-12 col-sm-12 col-lg-3">
+                          
+                          <figure class="banner-image">
+                              <div class="captions">
+                              <a [routerLink]="'/shop-one'">
+                              <img class="img-fluid" src="assets/images/banners/banner_3.jpg" alt="Banner Image">
+                              <div class="banner-caption left-caption">
+                                <h2>{{'Band Collection' | translate}} <small>{{'With Pearls' | translate}}</small></h2>
+                                
+
+                              </div>
+                              </a>
+                            </div>
+                            </figure>
+
+                      
+                        <figure class="banner-image mb0-image mt-image">
+                            <div class="captions">
+                            <a [routerLink]="'/shop-one'">
+                          <img class="img-fluid" src="assets/images/banners/banner_5.jpg" alt="Banner Image">
+                          <div class="banner-caption left-caption">
+                            <h2>{{'Diamond Rings' | translate}}<small>{{'A Precious Feeling' | translate}}</small></h2>
+
+                            
+
+                          </div>
+                          </a>
+                        </div>
+                        </figure>
+                      
+                  </div>
+                  </div>
+                
+                                                
+            </div>
+        </div>
+
+  </div>     
+</div>
+
+<!-- Products Tabs -->
+<div class="pro-content pro-tab-content">
+  <div class="container"> 
+    <div class="products-area">
+
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-12">
+          <div class="pro-heading-title">
+            <h1> {{ 'Welcome to Store' | translate }}</h1>
+          </div>
+        </div>
+      </div>
+      
+
+      <!-- ..........tabs start ......... -->
+      <div class="row ">
+        <div class="col-md-12 p-0">
+          <div class="nav" role="tablist" id="tabCarousel">
+            <a class="nav-link  active" data-toggle="tab" href="#featured" role="tab" >{{'Top Sales' | translate}}</a> 
+
+            <a class="nav-link"  data-toggle="tab" href="#special" role="tab" aria-controls="special" aria-selected="true">{{'Trending' | translate}}</a> 
+
+            <a class="nav-link" data-toggle="tab"  href="#liked" role="tab" aria-controls="liked" aria-selected="true">{{'Winter Sale' | translate}}</a> 
+          </div> 
+          <!-- Tab panes -->
+          <div class="tab-content">
+          
+            <div role="tabpanel" class="tab-pane fade active show" id="featured">
+              <!-- You can now use your library component in app.component.html -->
+              <ngx-slick-carousel class="carousel" 
+              #slickModal="slick-carousel" 
+              [config]="slideConfigTabFeatured" >
+                
+                <div ngxSlickItem class="slide" *ngFor="let product of products"> 
+                    <app-product-card  [data]="product"></app-product-card>
+                </div>
+                    
+              <!-- 1st tab --> 
+
+              </ngx-slick-carousel>
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="special">
+              <!-- You can now use your library component in app.component.html -->
+              <ngx-slick-carousel class="carousel " 
+              #slickModal="slick-carousel" 
+              [config]="slideConfigTabSpecial" >
+                
+                <div ngxSlickItem class="slide" *ngFor="let product of products"> 
+                    <app-product-card  [data]="product"></app-product-card>
+                </div>
+                    
+              <!-- 1st tab --> 
+
+              </ngx-slick-carousel>
+            </div>
+
+            <div role="tabpanel" class="tab-pane fade" id="liked">
+              <!-- You can now use your library component in app.component.html -->
+              <ngx-slick-carousel class="carousel " 
+              #slickModal="slick-carousel" 
+              [config]="slideConfigTabLiked" >
+                
+                <div ngxSlickItem class="slide" *ngFor="let product of products"> 
+                    <app-product-card  [data]="product"></app-product-card>
+                </div>
+                    
+              <!-- 1st tab --> 
+
+              </ngx-slick-carousel>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <!-- Special Offer -->
+<div class="pro-content pro-sp-content">
+  <div class="container"> 
+    <div class="products-area" *ngFor="let product of products | slice:0:1">
+      
+      
+      <div class="row align-items-center">                         
+        <div class="col-12 col-lg-7 order-2 order-lg-1">
+          <div class="pro-description">
+              <span class="pro-info">
+                {{'Super deal of the Month' | translate}}                      
+              </span>
+              <h2 class="pro-title"><a [routerLink]="'/product-one'">{{'Women Zircon Crystal Engagement Ring' | translate}}</a></h2>
+              
+                <div class="pro-price">
+                    <del>$180</del>
+                    <ins>$250</ins>
+                </div>
+
+                
+                <div class="countdown pro-timer pro-single-timer">
+                    <span class="days" ></span>
+                    <span class="hours" ></span>
+                    <span class="mintues" ></span>
+                    <span class="seconds" ></span>
+                </div>
+              <div class="pro-btns">
+                  
+                  <button type="button" class="btn btn-secondary swipe-to-top" (click)="onAddCart(product)">{{'Grab Now' | translate}}</button>
+                  
+                  
+              </div>
+        </div>
+        </div>
+        <div class="col-12 col-lg-5 order-1 order-lg-2">
+          <div class="pro-thumb "> 
+            
+            <a [routerLink]="'/product-one'">
+                <span class="pro-image"><img class="img-fluid" src="assets/images/product_images/deals_of_month.png" alt="Product Image"></span>
+            </a>
+            
+          </div>
+        </div>
+        
+       
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- Popular Products -->
+<div class="pro-content pro-pl-content">
+  <div class="container"> 
+    <div class="products-area">
+      <div class="row justify-content-center">
+        <div class="col-12 col-lg-12">
+          <div class="pro-heading-title">
+            <h2> {{'New Arrivals' | translate}} 
+            </h2>
+            <p>Vitae posuere urna blandit sed. Praesent ut dignissim risus. </p>
+          </div>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col-md-12 p-0">
+          <ngx-slick-carousel class="carousel " 
+      #slickModal="slick-carousel" 
+      [config]="slidePopularConfig" 
+      >                        
+        <div ngxSlickItem *ngFor="let product of products" class="slide">
+          <app-popular-product [data]="product" class="popular-product"></app-popular-product>
+        </div>
+
+      </ngx-slick-carousel>
+        </div>
+      </div>
+
+    </div>
+
+  </div>
+</div>  
+
+
+<app-full-screen-banner></app-full-screen-banner>
+
+<!-- Blogs -->
+<div class="pro-content blog-content">
+  
+  <div class="container">
+    <!-- heading -->
+    
+    <div class="row justify-content-center">
+      <div class="col-12 col-lg-12">
+        <div class="pro-heading-title">
+          <h2> {{'Latest Blog' | translate}} 
+          </h2>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p></div>
+        </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12 p-0">
+        <ngx-slick-carousel class="carousel " 
+        #slickModal="slick-carousel" 
+        [config]="slideBlogConfig" 
+        >                          
+        <div ngxSlickItem *ngFor="let blog of blogs" class="slide">
+           <app-blog-card-grid [data]="blog"></app-blog-card-grid>
+        </div>
+       </ngx-slick-carousel>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <app-footer-mobile></app-footer-mobile>
+  <app-footer-three></app-footer-three>
+  <app-accept-cookie></app-accept-cookie>
+
+  <app-product-modal></app-product-modal>
+  <app-newsletter-modal></app-newsletter-modal>
+  <app-back-to-top></app-back-to-top>
+  <app-switcher></app-switcher>

@@ -1,0 +1,478 @@
+<app-page-loader></app-page-loader>
+<app-header-two></app-header-two>
+<app-header-sticky></app-header-sticky>
+<app-header-mobile></app-header-mobile>
+
+<ngx-slick-carousel class="carousel Modern-Slider" 
+              #slickModal="slick-carousel" 
+              [config]="slideConfigCarousel" >
+
+              <div ngxSlickItem class="slide item">
+                <div class="img-fill">
+                  
+                  <div class="info" style="background-image: url(assets/images/slick_carousel_demo_2/Slider_01_02.jpg);">
+                    <div class="container">
+                      <div class="info_center">
+                        <h5>{{'Fine weather all year round' | translate}}</h5>
+                        <h2>{{'Rectify Your Feeling' | translate}}<br>{{'With Surroundings' | translate}}</h2>
+                        <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+                
+                <div ngxSlickItem class="slide item">
+                  <div class="img-fill">
+                    
+                    <div class="info" style="background-image: url(assets/images/slick_carousel_demo_2/Slider_01_01.jpg);">
+                      <div class="container">
+                        <div class="info_left">
+                          <h5>{{'LED-backlit Display' | translate}}</h5>
+                          <h2>{{'Update Yourself by' | translate}}<br>{{'Latest Technology' | translate}}</h2>
+                          <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div ngxSlickItem class="slide item">
+                  <div class="img-fill">
+                    
+                    <div class="info" style="background-image: url(assets/images/slick_carousel_demo_2/Slider_01_03.jpg);">
+                      <div class="container">
+                        <div class="info_right">
+                          <h5>{{'Meet New Generation Phones' | translate}}</h5>
+                          <h2>{{'See Through A Huge' | translate}}<br>{{'Mobile Collection' | translate}}</h2>
+                          <button class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+</ngx-slick-carousel>
+
+<section class="info-boxes-content">
+    <div class="container-fuild">
+        <div class="info-box-full bg-info-boxes-content">
+          <div class="row">
+            <div class="col-12 col-md-6 col-xl-3 pl-xl-0">
+                <div class="info-box">
+                  <i class="fas fa-truck"></i>
+                  <div class="block">
+                      <h4 class="title">{{'Free Shipping' | translate}}</h4>
+                      <p>{{'We provide free shipping for all order over $200.00' | translate}}</p>
+                  </div>
+                </div>
+            </div>
+            
+            <div class="col-12 col-md-6 col-xl-3 pl-xl-0">
+              <div class="info-box">
+                <i class="fas fa-life-ring"></i>
+                <div class="block">
+                    <h4 class="title">{{'Support 24/7' | translate}}</h4>
+                    <p>{{'We provide support to our customers 24 hours.' | translate}}</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 pl-xl-0">
+                <div class="info-box">
+                    <i class="fas fa-credit-card"></i>
+                        <div class="block">
+                            <h4 class="title">{{'Safe Payment' | translate}}</h4>
+                            <p>{{'We provide always safe payment methods.' | translate}}</p>
+                        </div>
+                </div>
+            </div> 
+            <div class="col-12 col-md-6 col-xl-3 pl-xl-0">
+                <div class="info-box last">
+                    <i class="fas fa-reply"></i>
+                        <div class="block">
+                            <h4 class="title">{{'Returns' | translate}}</h4>
+                            <p>{{'We provide always safe payment methods.' | translate}}</p>
+                        </div>
+                </div>
+            </div> 
+          </div>             
+        </div>
+    </div>
+</section>
+
+
+<!-- Popular Products -->
+<section class="pro-content pro-plr-content ">
+    <div class="container"> 
+      <div class="products-area">
+          <div class="row justify-content-center">
+              <div class="col-12 col-lg-12">
+                <div class="pro-heading-title">
+                  <h2>{{'Welcome to Store' | translate}}</h2>
+                  <p>Vitae posuere urna blandit sed. Praesent ut dignissim risus. </p></div>
+                </div>
+            </div>
+          <div class=" row">  
+            <div class="col-12 col-md-6 col-lg-4 col-xl-3" *ngFor="let product of products">
+                      
+              <app-product-card  [data]="product"></app-product-card>
+              
+            </div>                        
+            
+          </div>
+        
+
+        
+      </div>
+    </div>
+</section>
+<section class="pro-content pro-mini-content">
+    <div class="container">
+      <div class="row">
+          <div class="col-12 col-md-4">
+              <div class="pro-banner-text">
+                  <div class="pro-banner-thumb">
+                      <img class="img-fluid " src="assets/images/categories/category_image_6.jpg" alt="Category Image">
+                  </div>
+                  <div class="pro-image-text">
+                      <h4>{{'Game' | translate}}<br>{{'Accessories' | translate}}</h4>
+                      
+                
+                      <a href="#" class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</a>
+                    </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="pro-banner-text">
+                    <div class="pro-banner-thumb">
+                    <img class="img-fluid " src="assets/images/categories/category_image_3.jpg" alt="Category Image">
+                    </div>
+                    <div class="pro-image-text">
+                        <h4>{{'Multimedia' | translate}}<br>{{'Devices' | translate}}</h4>
+                        
+                  
+                        <a href="#" class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</a>
+                      </div>
+                </div>
+            </div>
+            <div class="col-12 col-md-4">
+                <div class="pro-banner-text">
+                    <div class="pro-banner-thumb">
+                    <img class="img-fluid " src="assets/images/categories/category_image_2.jpg" alt="Category Image">
+                    </div>
+                    <div class="pro-image-text">
+                        <h4>{{'Computers' | translate}}<br>{{'Accessories' | translate}}</h4>
+                        
+                  
+                        <a href="#" class="btn btn-secondary swipe-to-top">{{'Shop Now' | translate}}</a>
+                      </div>
+                </div>
+            </div>
+      </div>
+    </div>
+</section>
+
+<section class="pro-content pro-full-screen-banner">
+  <div class="pro-full-bg" style="background-image: url(assets/images/banners_demo_2/full_screen.jpg);"></div>
+    <div class="pro-full-screen-overlay">
+          <div class="pro-full-screen">
+              <div class="pro-heading-title">
+                  <h2> {{'The Perfect Match' | translate}} 
+                  </h2>
+                  <p>Vitae posuere urna blandit sed. Praesent ut dignissim risus.
+                    
+                  </p>
+                </div>
+                <button class="btn btn-secondary swipe-to-top">
+                  {{'Shop Now' | translate}}
+                </button>
+          </div>  
+        </div>
+</section>
+
+<!-- Special Offer -->
+<section class="pro-content pro-tr-content">
+    <div class="container"> 
+      <div class="products-area ">
+        
+          <div class="row justify-content-center">
+              <div class="col-12 col-lg-12">
+                <div class="pro-heading-title">
+                  <h2>{{'Special Offers' | translate}}
+                  </h2>
+                  <p>Morbi venenatis felis tempus feugiat maximus.</p></div>
+                </div>
+            </div>
+    
+           <div class="row">
+             <div class="col-md-12 p-0">
+              <ngx-slick-carousel class="carousel " 
+              #slickModal="slick-carousel" 
+              [config]="slideOffersConfig">
+                          
+            <div ngxSlickItem class="slide" *ngFor="let product of products">
+              <div class="product">
+                <article>                                   
+                  <div class="pro-thumb "> 
+                    
+                    <a href="product-page1.html">
+                        <span class="pro-image"><img class="img-fluid" src="{{product.products_image}}" alt="Product Image"></span>
+                        <span class="pro-image-hover swipe-to-top"><img class="img-fluid" src="{{product.products_image}}" alt="Product Image"></span>
+                    </a>
+                
+                    
+                    <div class="countdown pro-timer">
+                        <span class="days" ></span>
+                        <span class="hours" ></span>
+                        <span class="mintues" ></span>
+                        <span class="seconds" ></span>
+                    </div>
+                  </div>
+                  
+                  
+                  <div class="pro-description">
+                      <span class="pro-info">
+                        {{product.categories.categories_image | translate}}                                                      
+                        </span>
+                        <h2 class="pro-title"><a href="product-page1.html">{{product.products_name | translate}}</a></h2>
+                        
+                        <div class="pro-btns">
+                            <button type="button" class="btn btn-secondary swipe-to-top" (click)="onAddCart(product)">{{'Add to Cart' | translate}}</button>
+                            <div class="pro-price">
+                                
+                                <ins>{{product.products_price | currency}}</ins>
+                            </div>
+                        </div>
+                  </div>
+                    
+                </article>
+              </div>
+            </div>
+            </ngx-slick-carousel>
+             </div>
+           </div>
+        
+
+      </div>
+    </div>
+</section>
+
+<section class="pro-content pro-full-screen-banner">
+  <div class="pro-full-bg" style="background-image: url(assets/images/banners_demo_2/full_screen_2.jpg);"></div>
+  <div class="pro-full-screen-overlay">
+        <div class="pro-full-screen">
+            <div class="pro-heading-title">
+                <h2> {{'Technology Has No Boundary' | translate}}
+                </h2>
+                <p>Vitae posuere urna blandit sed. Praesent ut dignissim risus.
+                  
+                </p>
+              </div>
+              <button class="btn btn-secondary swipe-to-top">
+                {{'Shop Now' | translate}}
+              </button>
+        </div>  
+      </div>
+</section>
+
+<!-- Categories -->
+<div class="pro-content categories-content">
+  
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+          <div class="col-12 col-lg-12">
+            <div class="pro-heading-title">
+              <h1> {{'Popular Categories' | translate}}
+              </h1>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+            </div>
+          </div>
+        </div>
+              <!-- Categories -->
+
+        <div class="row">
+          <div class="col-md-12 p-0">
+            <ngx-slick-carousel class="carousel " 
+            #slickModal="slick-carousel" 
+            [config]="slideCategoryConfig" >
+                            
+        <div ngxSlickItem class="slide">
+          <div class="pro-Categories">
+            <div class="pro-Categories-thumb swipe-to-top">
+            
+                <div class="pro-Categories-title">
+                    <a href="#">
+                        {{'Mobiles and Tablets' | translate}}
+                    </a>
+                </div>
+                
+                <img class="img-fluid " src="assets/images/categories/category_image_1.jpg" alt="Category Image">
+                
+            </div>
+            <div class="pro-Categories-detail">
+                <h2><a href="#">
+                    {{'Mobiles and Tablets' | translate}}
+              </a></h2>
+              <ul class="pro-Categories-meta">
+                  <li><a href="#" tabindex="0">Apple </a></li>
+                  <li><a href="#" tabindex="0">Samsung</a>
+                  </li>
+                  <li><a href="#" tabindex="0">PowerBank </a></li>
+                  <li><a href="shop-page1.html" tabindex="0">{{'See all categories' | translate}}</a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+
+          <div class="pro-Categories">
+            <div class="pro-Categories-thumb">
+          
+                <div class="pro-Categories-title">
+                    <a href="#">{{'Computers & Accessories' | translate}}
+                    </a>
+                </div>
+                
+                <img class="img-fluid swipe-to-top" src="assets/images/categories/category_image_2.jpg" alt="Category Image">
+                
+            </div>
+            <div class="pro-Categories-detail">
+                <h2><a href="#">{{'Computers & Accessories' | translate}}
+                </a></h2>
+              <ul class="pro-Categories-meta">
+                  <li><a href="#" tabindex="0">Computers </a></li>
+                  <li><a href="#" tabindex="0">Laptops</a>
+                  </li>
+                  <li><a href="#" tabindex="0">Monitors </a></li>
+                  <li><a href="shop-page1.html" tabindex="0">{{'See all categories' | translate}}</a></li>
+              </ul>
+              
+            </div>
+        </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="pro-Categories">
+            <div class="pro-Categories-thumb">
+          
+                <div class="pro-Categories-title">
+                    <a href="#">{{'Cameras, Audio & Video' | translate}}
+                    </a>
+                </div>
+                
+                <img class="img-fluid swipe-to-top" src="assets/images/categories/category_image_3.jpg" alt="Category Image">
+            </div>
+            <div class="pro-Categories-detail">
+              <h2><a href="#">{{'Cameras, Audio & Video' | translate}}
+              </a></h2>
+              <ul class="pro-Categories-meta">
+                  <li><a href="#" tabindex="0">Audio </a></li>
+                  <li><a href="#" tabindex="0">Video</a>
+                  </li>
+                  <li><a href="#" tabindex="0">Headphones </a></li>
+                  <li><a href="shop-page1.html" tabindex="0">{{'See all categories' | translate}}</a></li>
+              </ul>
+              
+            </div>
+          </div> 
+
+        </div>
+        <div ngxSlickItem class="slide">
+
+          <div class="pro-Categories">
+            <div class="pro-Categories-thumb">
+          
+                <div class="pro-Categories-title">
+                    <a href="#">{{'Home appliances' | translate}}
+                    </a>
+                </div>
+                
+                <img class="img-fluid swipe-to-top" src="assets/images/categories/category_image_4.jpg" alt="Category Image">
+                
+            </div>
+            <div class="pro-Categories-detail">
+                <h2><a href="#">{{'Home appliances' | translate}}
+                </a></h2>
+              <ul class="pro-Categories-meta">
+                  <li><a href="#" tabindex="0">TV Accessories</a>
+                  </li>
+                  <li><a href="#" tabindex="0">Air Conditioner </a></li>
+                  <li><a href="#" tabindex="0">Dryer </a></li>
+                  <li><a href="shop-page1.html" tabindex="0">{{'See all categories' | translate}}</a></li>
+              </ul>
+              
+            </div>
+          </div>
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="pro-Categories">
+            <div class="pro-Categories-thumb">
+          
+                <div class="pro-Categories-title">
+                    <a href="#">{{'Kitchen Appliances' | translate}}
+                    </a>
+                </div>
+                
+                <img class="img-fluid swipe-to-top" src="assets/images/categories/category_image_5.jpg" alt="Category Image">
+                
+            </div>
+            <div class="pro-Categories-detail">
+              <h2><a href="#">{{'Kitchen Appliances' | translate}}
+              </a></h2>
+              <ul class="pro-Categories-meta">
+                  <li><a href="#" tabindex="0">Bakeware</a></li>
+                  <li><a href="#" tabindex="0">Cookware</a>
+                  </li>
+                  <li><a href="#" tabindex="0">Gas Stoves</a></li>
+                  <li><a href="shop-page1.html" tabindex="0">{{'See all categories' | translate}}</a></li>
+              </ul>
+              
+            </div>
+          </div>  
+        </div>
+        <div ngxSlickItem class="slide">
+          <div class="pro-Categories">
+            <div class="pro-Categories-thumb">
+            
+                <div class="pro-Categories-title">
+                    <a href="#">{{'Music and video games' | translate}}
+                    </a>
+                </div>
+                
+                <img class="img-fluid swipe-to-top" src="assets/images/categories/category_image_6.jpg" alt="Category Image">
+                
+            </div>
+            <div class="pro-Categories-detail">
+              <h2><a href="#">{{'Music and video games' | translate}}
+              </a></h2>
+              <ul class="pro-Categories-meta">
+                  <li><a href="#" tabindex="0">TV & Video Devices </a></li>
+                  <li><a href="#" tabindex="0">TV Accessories</a>
+                  </li>
+                  <li><a href="#" tabindex="0">Air Conditioner </a></li>
+                  <li><a href="shop-page1.html"  tabindex="0">{{'See all categories' | translate}}</a></li>
+              </ul>
+              
+            </div>
+          </div>  
+        </div>
+
+       </ngx-slick-carousel>
+          </div>
+        </div>
+   
+          </div>
+      
+</div>
+
+
+
+
+<app-footer-mobile></app-footer-mobile>
+<app-footer-one></app-footer-one>
+<app-accept-cookie></app-accept-cookie>
+
+<app-product-modal></app-product-modal>
+<app-newsletter-modal></app-newsletter-modal>
+<app-back-to-top></app-back-to-top>
+<app-switcher></app-switcher>

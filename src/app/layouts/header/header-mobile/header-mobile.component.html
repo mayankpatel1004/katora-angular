@@ -1,0 +1,272 @@
+<!-- //Mobile Header -->
+<header id="headerMobile" class="header-area header-mobile">
+  <app-alert-header></app-alert-header>
+  <div class="header-mini bg-top-bar">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-12">
+              <div class="navbar-lang">
+              
+                <app-langauge-dropdown></app-langauge-dropdown>
+                <app-currency-dropdown></app-currency-dropdown>
+              </div>
+        </div>
+      </div>
+    </div> 
+  </div>
+  <div class="header-maxi bg-header-bar ">
+    <div class="container">
+        
+      <div class="row align-items-center">
+        <div class="col-2 pr-0">
+            <div class="navigation-mobile-container">
+                <a href="javascript:void(0)" class="navigation-mobile-toggler">
+                    <span class="fas fa-bars"></span>
+                </a>
+                <nav id="navigation-mobile">
+                    <div class="logout-main">
+                        <div class="welcome">
+                            <span>{{'Welcome Guest !' | translate}}</span>
+                        </div>
+                        <div class="logout">
+                            <a [routerLink]="'/'" class="">{{'Logout' | translate}}</a> 
+                        </div>
+                          
+                    </div> 
+
+                    <a class="main-manu btn" data-toggle="collapse" href="#homepages" role="button" aria-expanded="false" aria-controls="shoppages">
+                        {{'Home' | translate}}
+                     
+                    </a>
+                    <div class="sub-manu collapse multi-collapse" id="homepages">
+                        <ul class="unorder-list">
+                          <li class="">
+                            <a [routerLink]="'/'" class="btn main-manu">
+                              {{'Home Page' | translate}} 1
+                            </a>
+                            <a [routerLink]="'/home-two'" class="btn main-manu">
+                                {{'Home Page' | translate}} 2
+                            </a>
+                            <a [routerLink]="'/home-three'" class="btn main-manu">
+                                {{'Home Page' | translate}} 3
+                            </a>
+                          </li>
+                        </ul>
+                    </div>  
+
+                    <a class="main-manu btn" data-toggle="collapse" href="#shoppages" role="button" aria-expanded="false" aria-controls="shoppages">
+                        {{'Shop' | translate}}
+                  
+                    </a>
+                    <div class="sub-manu collapse multi-collapse" id="shoppages">
+                        <ul class="unorder-list">
+                          <li class="">
+                            <a [routerLink]="'/shop-one'" class="btn main-manu">
+                              {{'Top Bar' | translate}}
+                            </a>
+                            <a [routerLink]="'/shop-two'" class="btn main-manu">
+                              {{'Right Sidebar' | translate}}
+                            </a>
+                            <a [routerLink]="'/shop-three'" class="btn main-manu">
+                              {{'Top and Right Sidebar' | translate}}
+                            </a>
+                            <a [routerLink]="'/shop-four'" class="btn main-manu">
+                              {{'Left Sidebar' | translate}}
+                            </a>
+                            <a [routerLink]="'/shop-five'" class="btn main-manu">
+                              {{'Top and Left Sidebar' | translate}}
+                            </a>
+                          </li>
+                        </ul>
+                    </div>  
+
+                    <a class=" main-manu btn" data-toggle="collapse" href="#productpages" role="button" aria-expanded="false" aria-controls="productpages">
+                      {{'Product' | translate}}
+                   
+                    </a>
+                    <div class="sub-manu collapse multi-collapse" id="productpages">
+                        <ul class="unorder-list">
+                          <li class="">
+                            <a [routerLink]="'/product-one'" class="btn main-manu">
+                              {{'Left Carousel' | translate}}
+                            </a>
+                            <a [routerLink]="'/product-two'" class="btn main-manu">
+                              {{'Right Carousel' | translate}}
+                            </a>
+                            <a [routerLink]="'/product-three'" class="btn main-manu">
+                              {{'Vertical Thumbnail Carousel' | translate}}
+                            </a>
+                            <a [routerLink]="'/product-four'" class="btn main-manu">
+                              {{'Right Banner' | translate}}
+                            </a>
+                            <a [routerLink]="'/product-five'" class="btn main-manu">
+                              {{'Best Seller' | translate}}
+                            </a>
+                            
+                          </li>
+                        </ul>
+                    </div>   
+
+                      <a class=" main-manu btn" data-toggle="collapse" href="#staticpages" role="button" aria-expanded="false" aria-controls="staticpages">
+                          {{'Pages' | translate}}
+                       
+                      </a>
+                      <div class="sub-manu collapse multi-collapse" id="staticpages">
+                        <ul class="unorder-list">
+                            <li class="">
+                              <a class="main-manu btn " data-toggle="collapse" href="#staticabout" role="button" aria-expanded="false" aria-controls="staticabout">
+                                  {{'About Us' | translate}}
+                                  
+                              </a>
+                              <div class="sub-manu1 collapse multi-collapse" id="staticabout">
+                                <ul class="unorder-list">
+                                    <li class="">
+                                      <a [routerLink]="'/about-one'" class="btn main-manu">
+                                        {{'About Us Page' | translate}} 1
+                                      </a>
+                                      <a [routerLink]="'/about-two'" class="btn main-manu">
+                                          {{'About Us Page' | translate}} 2
+                                        </a>
+                                    </li>
+                                </ul>    
+                              </div> 
+                              
+
+                              <a class="main-manu btn " data-toggle="collapse" href="#staticcontact" role="button" aria-expanded="false" aria-controls="staticcontact">
+                                  {{'Contact Us' | translate}}
+                                  
+                              </a>
+                              <div class="sub-manu1 collapse multi-collapse" id="staticcontact">
+                                <ul class="unorder-list">
+                                    <li class="">
+                                      <a [routerLink]="'/contact-one'" class="btn main-manu">
+                                        {{'Contact Us Page' | translate}} 1
+                                      </a>
+                                      <a [routerLink]="'/contact-two'" class="btn main-manu">
+                                        {{'Contact Us Page' | translate}} 2
+                                      </a>
+                                    </li>
+                                </ul>    
+                              </div> 
+
+                              <a class="main-manu btn" data-toggle="collapse" href="#staticlogin" role="button" aria-expanded="false" aria-controls="staticlogin">
+                                {{'Login' | translate}}
+                                
+                              </a>
+                              <div class="sub-manu1 collapse multi-collapse" id="staticlogin">
+                                <ul class="unorder-list">
+                                    <li class="">
+                                      <a [routerLink]="'/login-one'" class="btn main-manu">
+                                        {{'Login Page' | translate}} 1
+                                      </a>
+                                      <a [routerLink]="'/login-two'" class="btn main-manu">
+                                        {{'Login Page' | translate}} 2
+                                      </a>
+                                    </li>
+                                </ul>    
+                              </div>
+
+                              <a class="main-manu btn " data-toggle="collapse" href="#staticblog" role="button" aria-expanded="false" aria-controls="staticblog">
+                                  {{'Blogs' | translate}}
+                                  
+                              </a>
+                              <div class="sub-manu1 collapse multi-collapse" id="staticblog">
+                                <ul class="unorder-list">
+                                    <li class="">
+                                      <a [routerLink]="'/blog-one'" class="btn main-manu">
+                                        {{'Blog Page' | translate}} 1
+                                      </a>
+                                      <a [routerLink]="'/blog-two'" class="btn main-manu">
+                                          {{'Blog Page' | translate}} 2
+                                      </a>
+                                    </li>
+                                </ul>    
+                              </div>
+
+                              <a class="main-manu btn " data-toggle="collapse" href="#staticcart" role="button" aria-expanded="false" aria-controls="staticcart">
+                                  {{'Shopping Cart' | translate}}
+                                  
+                              </a>
+                              <div class="sub-manu1 collapse multi-collapse" id="staticcart">
+                                <ul class="unorder-list">
+                                    <li class="">
+                                      <a [routerLink]="'/cart-one'" class="btn main-manu">
+                                        {{'Cart Page' | translate}} 1
+                                      </a>
+                                      <a [routerLink]="'/cart-two'" class="btn main-manu">
+                                        {{'Cart Page' | translate}} 2
+                                      </a>
+                                    </li>
+                                </ul>    
+                              </div>
+
+                              <a [routerLink]="'/checkout'" class="main-manu btn ">
+                                {{'Checkout' | translate}}
+                              </a>
+                            </li>
+                        </ul>    
+                      </div> 
+                          
+                      <a [routerLink]="'/profile'" class="main-manu btn ">
+                        {{'Profile' | translate}}
+                      </a>
+                      <a [routerLink]="'/wishlist'" class="main-manu btn ">
+                        {{'Wishlist' | translate}} (8)
+                      </a>
+                      <a [routerLink]="'/compare'" class="main-manu btn ">
+                          {{'Compare' | translate}}
+                        </a>
+                   
+                      <a [routerLink]="'/my-orders'" class="main-manu btn ">
+                        {{'Orders' | translate}}
+                      </a>
+                      <a [routerLink]="'/shipping-addresses'" class="main-manu btn ">
+                        {{'Shipping Address' | translate}}
+                      </a>
+                </nav>
+            </div>
+            
+        </div>
+
+        
+
+        <div class="col-8">
+            <app-logo></app-logo>
+        </div>
+        
+        <div class="col-2 pl-0">
+            <div class="dropdown">
+              <app-cart-dropdown></app-cart-dropdown>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div class="header-navbar bg-menu-bar">
+    <div class="container">
+      <form class="form-inline">
+          <div class="search-field-module">                           
+              <div class="search-field-select" >
+                  <select class="form-control">
+                    <option selected>All Categories</option>
+                    <option value="1">Rings
+&nbsp;</option>
+                    <option value="1">Earrings&nbsp;</option>
+                    <option value="1">Crowns&nbsp;</option>
+                    <option value="1">Necklace&nbsp;</option>
+                    <option value="1">Bracelet&nbsp;</option>
+                    <option value="1">Anklet&nbsp;</option>
+                    <option value="1">Hairpin&nbsp;</option>
+                    <option value="2">Bangle&nbsp;</option>
+                      </select>
+              </div>
+              <div class="search-field-wrap">
+                  <input  type="search" placeholder="Search Products..." data-toggle="tooltip" data-placement="bottom" title="search item">
+                  <button class="btn btn-secondary swipe-to-top" data-toggle="tooltip" data-placement="bottom" title="Search Products">
+                  <i class="fa fa-search"></i></button>
+              </div>
+            </div>
+      </form>
+    </div>
+  </div>
+</header> 
