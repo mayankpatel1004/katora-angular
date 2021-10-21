@@ -23,6 +23,7 @@
     "@ngx-translate/core": "^11.0.1",
     "@ngx-translate/http-loader": "^4.0.0",
     "@types/googlemaps": "^3.39.0",
+    "angular-cli-ghpages": "^1.0.0-rc.2",
     "angular-fancybox-plus": "^1.0.3",
     "body-scroll-lock": "^2.6.4",
     "bootstrap": "^4.4.1",
