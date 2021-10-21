@@ -21,4 +21,5 @@ ngh --dir=dist/katora
 ```bash
 Source
 https://medium.com/tech-insights/how-to-deploy-angular-apps-to-github-pages-gh-pages-896c4e10f9b4
+https://www.youtube.com/watch?v=8Mle8owZ3_4
 ```
